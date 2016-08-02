@@ -33,6 +33,7 @@ body {
     margin: auto;
    	color: white !important;
    	padding-top: 20px;
+	margin-left: 0 !important;
 }
 
 .navbar .navbar-nav li a {
