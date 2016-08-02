@@ -22,7 +22,8 @@ html {
     height: 60px;
     padding-top: 5px;
 }
-.navbar-brand {
+.navbar-brand,
+.navbar-brand:hover {
     font-size: 20px;
     font-weight: bold;
     position: absolute;
