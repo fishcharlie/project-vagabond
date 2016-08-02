@@ -47,3 +47,12 @@ html {
 .icon-bar {
     background-color: white;
 }
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: inherit;
+}
+
+.navbar-nav li a:hover {
+    color: white;
+}
