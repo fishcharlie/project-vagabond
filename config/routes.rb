@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :posts
   # Index/Welcome Routes
 	root to: "welcome#index"
 
@@ -10,5 +9,7 @@ Rails.application.routes.draw do
 
   # User Routes
 	resources :users
-	# For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  #Post Routes
+  	resources :posts
 end

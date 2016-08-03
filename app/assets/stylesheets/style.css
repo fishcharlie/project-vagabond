@@ -1,5 +1,4 @@
 /*Nav Items*/
-
 .navbar-default {
     background-color: transparent;
 }
@@ -49,5 +48,82 @@
 .navbar-nav li a:hover {
     color: white;
 }
+
+/*Profile Page*/
+.profileheader {
+    margin-top: 60px;
+    padding-top: 20px;
+}
+.profilename {
+    font-size:40px;
+}
+.profilecontent {
+     text-align: right;
+}
+.profile {
+    background: url('profilebg.png');
+    height: 100vh;
+}
+
+
+/** Index Page **/
+.hero {
+    background: url('background.jpg') no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 500px;
+    /*margin-top: px;*/
+}
+
+.hero p {
+    padding-top: 320px;
+    color: #ffffff;
+    font-weight: 100;
+    letter-spacing: 3px;
+    font-size: 42px;
+}
+
+body {
+    background-color: transparent;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.places_container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.place {
+    border: 1px solid black;
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 150px;
+    margin-top: 30px;
+}
+
+img {
+    border-radius: 30px;
+    width: 200px;
+    height: 150px;
+    overflow: hidden;
+    padding: 15px 15px 15px 0px;
+}
+
+p {
+    font-size: 36px;
+    padding-top: 50px;
+    text-align: center;
+    font-weight: 200;
+}
+
+.btn-secondary {
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+
+
 
 
