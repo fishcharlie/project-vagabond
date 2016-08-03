@@ -1,6 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<p>Welcome, <%= @user.first_name %></p>
-
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<h2>Welcome, <%= @user.first_name %></h2>
+<p>Email: <%= @user.email %></p>
+<p>Your City: <%= @user.current_city %></p>
+<p>Profile Created: <%= @user.created_at %></p>
+<img src="<%= @user.profile_photo %>"/>
+<br>
+<br>
+<div><%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Back', users_path %></div>
