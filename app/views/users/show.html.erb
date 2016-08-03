@@ -6,5 +6,11 @@
 <p>Profile Created: <%= @user.created_at %></p>
 <img src="<%= @user.profile_photo %>"/>
 <br>
-<br>
+<h3>Locations </h3>
+<%@user.posts.each do |title|%>
+ 	<p>City: <%=title.title%></p>
+ 	<p>Summary:<%=title.summary%></p>
+ <%end%>
+
 <div><%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Back', users_path %></div>
+
