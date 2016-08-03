@@ -12,6 +12,55 @@
 	<div style="display: inline-block"><%= button_to 'Sign Up', new_user_path, method: :get %></div>
 	<div style="display: inline-block"><%= button_to 'Log In', log_in_path, method: :get %></div>
 	<div style="display: inline-block"><%= button_to 'Logout', logout_path, method: :delete %></div>
+
+  <!DOCTYPE html>
+  <html>
+      <head>
+          <title>Vagabond</title>
+
+          <!--jquery-->
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+
+          <!--boostrap-->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+          <link rel="stylesheet" href="style.css">
+          <link rel="stylesheet" href="index.css">
+
+      </head>
+      <body>
+          <header>
+
+          <!-- Navigation Bar -->
+          <nav class="navbar navbar-fixed-top" id="navbar-def">
+              <div class="container-fluid">
+                  <div class="navbar-header">
+                      <!--Burger navbar -->
+                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                          <span class="icon-bar"></span>
+                      </button>
+                      <a class="navbar-brand" href="/">Vagabond</a>
+                  </div>
+
+                  <div id="navbar" class="navbar-collapse collapse">
+                      <ul class="nav navbar-nav navbar-right">
+                          <li>
+                              <a href="#loginModal" role="button" data-toggle="modal">Login</a>
+                          </li>
+                          <li>
+                              <a href="#registerModal" role="button" data-toggle="modal">Register</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </nav>
+           </header>
+
+
+
     <%= yield %>
   </body>
 </html>
