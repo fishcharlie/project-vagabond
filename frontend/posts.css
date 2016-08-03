@@ -2,7 +2,7 @@
 	height: 200px;
 	width: 850px;
 	margin: 0 0 50px 0;
-	border-width: 2px;
+	border-width: 4px;
 	border-radius: 8px;
 	border-style: double;
 	border-color: #2F354B;
@@ -19,16 +19,14 @@ opacity: 1;
  -moz-transition: color .7s ease-out,background 7s ease-in;
  -webkit-transition: color .7s ease-out,background 7s ease-in;
  transition: color .7s ease-out,background 7s ease-in;
-
 }
-
-
 
 .avatar {
 	border-radius: 50%;
 	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
 	height: 100px;
 	width: 100px;
+	float: left;
 }
 .avatar:hover {
 	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);
@@ -38,6 +36,7 @@ opacity: 1;
 	color: #ebedf5;
 	text-align: center;
 	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+	margin-right: 130px;
 }
 
 .post_date {
@@ -53,8 +52,10 @@ opacity: 1;
 	background-color: #A9B3D5;
 	text-align: center;
 	height: 30px;  
-	width: 500px;
+	width: 450px;
 	font-size: 20px;
+	display: inline-block;
+	margin-left: 110px;
 }
 .post_summary:hover {
 	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);
