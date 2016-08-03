@@ -15,21 +15,3 @@ body {
     background: url('profilebg.png');
     height: 100vh;
 }
-
-/*Nav Items*/
-
-.navbar {
-    border-bottom: 1px black solid;
-}
-.navbar-brand, .navbar-brand:hover {
-    color: black;
-}
-.navbar .navbar-nav li a {
-    color: black;
-}
-.icon-bar {
-    background-color: black;
-}
-.navbar-nav li a:hover {
-    color: black;
-}
