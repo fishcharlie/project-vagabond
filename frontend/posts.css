@@ -42,13 +42,21 @@ opacity: 1;
 	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
 	margin-right: 130px;
 }
+.username:hover {
+	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
+}
 
 .post_date {
+	color: #ebedf5;
+	font-weight: lighter;
 	float: left;
 	font-size: 20px;
 	margin-left: 0px;
 	margin-right: 35px;
-
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+}
+.post_date:hover {
+	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
 }
 
 .post_summary {
