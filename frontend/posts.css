@@ -1,5 +1,5 @@
 .post {
-	height: 300px;
+	height: 400px;
 	width: 700px;
 	margin: 0 0 50px 0;
 	border-width: 2px;
@@ -14,6 +14,12 @@
 
 .post:hover {
 opacity: 1;
+ -o-transition: color .7s ease-out,background 7s ease-in;
+ -ms-transition: color .7s ease-out,background 7s ease-in;
+ -moz-transition: color .7s ease-out,background 7s ease-in;
+ -webkit-transition: color .7s ease-out,background 7s ease-in;
+ transition: color .7s ease-out,background 7s ease-in;
+
 }
 
 
@@ -46,41 +52,16 @@ opacity: 1;
 	border-color: #2F354B;
 	background-color: #A9B3D5;
 	text-align: center;
-	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
-	height: ;  
-	width: ;
-	/*bubble float top:
-	display: inline-block;
-	position: relative;
-	transition-duration: $defaultDuration;
-	transition-property: transform;
-
-	@include hideTapHighlightColor();
-	@include hardwareAccel();
-	@include improveAntiAlias();
-
-	&:before {
-		pointer-events: none;
-		position: absolute;
-		z-index: -1;
-		top: calc(50% - #{$tipHeight});
-		right: 0;
-		content: '';
-		border-style: solid;
-		border-width: $tipHeight 0 $tipHeight $tipWidth;
-		border-color: transparent transparent transparent $tipColour;
-		transition-duration: $defaultDuration;
-		transition-property: right;
-	}
-
-	&:hover {
-		transform: translateX(-5px);
-	}
-
-	&:hover:before {
-		right: -($tipWidth);
-	}*/
+	height: 30px;  
+	width: 500px;
+	font-size: 20px;
 }
 .post_summary:hover {
 	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+	 -o-transition: color .7s ease-out,background 7s ease-in;
+    -ms-transition: color .7s ease-out,background 7s ease-in;
+    -moz-transition: color .7s ease-out,background 7s ease-in;
+    -webkit-transition: color .7s ease-out,background 7s ease-in;
+    transition: color .7s ease-out,background 7s ease-in;
 }
