@@ -1,30 +1,86 @@
 .post {
 	height: 300px;
-	width: 500px;
-	outline: 5px double black;
+	width: 700px;
 	margin: 0 0 50px 0;
 	border-width: 2px;
-	border-radius: 5px;
+	border-radius: 8px;
 	border-style: double;
-	border-color: black;
+	border-color: #2F354B;
 	padding: 25px 50px 75px 100px;
 	font: 15px arial, sans-serif;
+	background-color: #5367AC;
+	opacity: .9;
 }
+
+.post:hover {
+opacity: 1;
+}
+
+
 
 .avatar {
 	border-radius: 50%;
-	-webkit-filter: drop-shadow(4px 4px 5px blue);
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
 	height: 100px;
 	width: 100px;
 }
-
-.post_summary {
-
+.avatar:hover {
+	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);
 }
 
-p {
+.username {
+	color: #ebedf5;
+	text-align: center;
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+}
+
+.post_date {
+	float: right;
+	font-size: 20px;
+}
+
+.post_summary {
     border-width: 2px;
 	border-radius: 8px;
 	border-style: double;
-	border-color: black;
+	border-color: #2F354B;
+	background-color: #A9B3D5;
+	text-align: center;
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+	height: ;  
+	width: ;
+	/*bubble float top:
+	display: inline-block;
+	position: relative;
+	transition-duration: $defaultDuration;
+	transition-property: transform;
+
+	@include hideTapHighlightColor();
+	@include hardwareAccel();
+	@include improveAntiAlias();
+
+	&:before {
+		pointer-events: none;
+		position: absolute;
+		z-index: -1;
+		top: calc(50% - #{$tipHeight});
+		right: 0;
+		content: '';
+		border-style: solid;
+		border-width: $tipHeight 0 $tipHeight $tipWidth;
+		border-color: transparent transparent transparent $tipColour;
+		transition-duration: $defaultDuration;
+		transition-property: right;
+	}
+
+	&:hover {
+		transform: translateX(-5px);
+	}
+
+	&:hover:before {
+		right: -($tipWidth);
+	}*/
+}
+.post_summary:hover {
+	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);
 }
