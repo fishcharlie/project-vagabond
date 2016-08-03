@@ -1,0 +1,30 @@
+.post {
+	height: 300px;
+	width: 500px;
+	outline: 5px double black;
+	margin: 0 0 50px 0;
+	border-width: 2px;
+	border-radius: 5px;
+	border-style: double;
+	border-color: black;
+	padding: 25px 50px 75px 100px;
+	font: 15px arial, sans-serif;
+}
+
+.avatar {
+	border-radius: 50%;
+	-webkit-filter: drop-shadow(4px 4px 5px blue);
+	height: 100px;
+	width: 100px;
+}
+
+.post_summary {
+
+}
+
+p {
+    border-width: 2px;
+	border-radius: 8px;
+	border-style: double;
+	border-color: black;
+}
