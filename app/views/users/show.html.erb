@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<h2>Welcome, <%= @user.first_name %></h2>
+<p>Email: <%= @user.email %></p>
+<p>Your City: <%= @user.current_city %></p>
+<p>Profile Created: <%= @user.created_at %></p>
+<img src="<%= @user.profile_photo %>"/>
+<br>
+<h3>Locations </h3>
+<%@user.posts.each do |post|%>
+ 	<p>City: <a href="../posts/<%=post.id%>"><%=post.title%></a></p>
+ 	<p>Summary:<%=post.summary%></p>
+ 	<%= link_to 'Edit', edit_post_path(post) %> |
+	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+
+ <%end%>
+
+<div><%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Back', users_path %></div>
+
