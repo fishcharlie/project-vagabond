@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :posts
   # Index/Welcome Routes
 	root to: "welcome#index"
 
