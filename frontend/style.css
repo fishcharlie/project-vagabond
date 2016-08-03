@@ -49,3 +49,13 @@
 .navbar-nav li a:hover {
     color: white;
 }
+
+.place {
+    border-radius: 25px;
+    background-opacity: 0.3;
+    height: 200px;
+} /*testing*/
+
+.places_container {
+    margin-top: 100px;
+}
