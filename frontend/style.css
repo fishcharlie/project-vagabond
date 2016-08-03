@@ -1,0 +1,53 @@
+/*Nav Items*/
+
+.navbar-default {
+    background-color: transparent;
+}
+.navbar {
+    margin-bottom: 0;
+    z-index: 3;
+    border-bottom: 1px white solid;
+    font-size: 14px;
+    line-height: 2;
+    letter-spacing: 4px;
+    border-radius: 0;
+    height: 60px;
+    padding-top: 5px;
+}
+.navbar-brand,
+.navbar-brand:hover {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    text-align: center;
+    color: white;
+    padding-top: 20px;
+    margin-left: 0;
+}
+.navbar .navbar-nav li a {
+    color: white;
+    outline: none
+}
+.navbar-toggle {
+    z-index: 2;
+}
+.navbar-nav li a:hover {
+    color: #E972B6;
+}
+.icon-bar {
+    background-color: white;
+}
+
+.nav>li>a:focus,
+.nav>li>a:hover {
+    background-color: inherit;
+}
+
+.navbar-nav li a:hover {
+    color: white;
+}
+
+
