@@ -46,7 +46,9 @@ opacity: 1;
 .post_date {
 	float: left;
 	font-size: 20px;
-		margin-right: 490px;
+	margin-left: 0px;
+	margin-right: 35px;
+
 }
 
 .post_summary {
