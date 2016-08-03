@@ -1,55 +1,124 @@
-<div class="hero">
-    <p>Roam free. Join our community.</p>
-</div>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vagabond</title>
 
-<div class="places_container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3 place">
-            <div class="col-md-4">
-                <img class="mini-location-pic" src="seed_pics/denver.jpg">
+        <!--jquery-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
+
+        <!--boostrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-fixed-top" id="navbar-def">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <!--Burger navbar -->
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/">Vagabond</a>
+                </div>
+
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#loginModal" role="button" data-toggle="modal">Login</a>
+                        </li>
+                        <li>
+                            <a href="#registerModal" role="button" data-toggle="modal">Register</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            <div class="col-md-4">
-                <p>Denver, CO</p>
-            </div>
-            <div class="col-md-4">
-                <button type="button" class="btn btn-secondary">See Posts</button>
+        </nav>
+
+
+
+        <!-- Register Modal -->
+        <div id="registerModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Register</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="register-form" role="form" name="register-form">
+                        <div class="form-group">
+                          <label for="first_name">First Name:</label>
+                          <input name="first_name" type="text" class="form-control" id="first_name">
+                        </div>
+                        <div class="form-group">
+                          <label for="last_name">Last Name:</label>
+                          <input name="last_name" type="text" class="form-control" id="last_name">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Email:</label>
+                          <input name="email" type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                          <label for="password_digest">Password:</label>
+                          <input name="password_digest" type="text" class="form-control" id="password_digest">
+                        </div>
+                        <div class="form-group">
+                          <label for="password_digest">Confirm Password:</label>
+                          <input name="password_digest" type="text" class="form-control" id="password_digest">
+                        </div>
+                        <div class="form-group">
+                          <label for="current_city">Current City:</label>
+                          <input name="current_city" type="text" class="form-control" id="current_city">
+                        </div>
+                        <div class="form-group">
+                          <label for="profile_photo">Profile Photo:</label>
+                          <input name="profile_photo" type="text" class="form-control" id="profile_photo">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-md-6 col-md-offset-3 place">
-                <div class="col-md-4">
-                    <img class="mini-location-pic" src="seed_pics/denver.jpg">
-                </div>
-                <div class="col-md-4">
-                    <p>Denver, CO</p>
-                </div>
-                <div class="col-md-4">
-                    <button type="button" class="btn btn-secondary">See Posts</button>
+        <!-- Login Modal -->
+        <div id="loginModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Login</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form id="sign-in-form" role="form" name="sign-in-form">
+                        <div class="form-group">
+                          <label for="email">Email:</label>
+                          <input name="email" type="text" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                          <label for="password_digest">Password:</label>
+                          <input name="password_digest" type="text" class="form-control" id="password_digest">
+                        </div>
+                        <button type="submit" class="btn btn-default">Submit</button>
+                      </form>
+                    </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 place">
-                    <div class="col-md-4">
-                        <img class="mini-location-pic" src="seed_pics/denver.jpg">
-                    </div>
-                    <div class="col-md-4">
-                        <p>Denver, CO</p>
-                    </div>
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-secondary">See Posts</button>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 col-md-offset-3 place">
-                        <div class="col-md-4">
-                            <img class="mini-location-pic" src="seed_pics/denver.jpg">
-                        </div>
-                        <div class="col-md-4">
-                            <p>Denver, CO</p>
-                        </div>
-                        <div class="col-md-4">
-                            <button type="button" class="btn btn-secondary">See Posts</button>
-                        </div>
-                    </div>
-                </div>
+        </div>
+
+        <div class ="row"></div>
+        <div class ="row"></div>  
+        <div class ="row"></div>  
+
+
+
+    </body>
+</html>
