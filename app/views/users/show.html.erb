@@ -8,7 +8,7 @@
 <br>
 <h3>Locations </h3>
 <%@user.posts.each do |post|%>
- 	<p>City: <a href="../posts/<%=post.id%>"><%=post.title%></a></p>
+ 	<p>Title: <a href="../posts/<%=post.id%>"><%=post.title%></a></p>
  	<p>Summary:<%=post.summary%></p>
  	<%= link_to 'Edit', edit_post_path(post) %> |
 	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>

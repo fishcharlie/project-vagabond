@@ -20,7 +20,6 @@ class UsersController < ApplicationController
   # GET /users/1/edit
   def edit
     @user = User.find(params[:id])
-
   end
 
   # POST /users
@@ -32,16 +31,15 @@ class UsersController < ApplicationController
 
   # PATCH/PUT /users/1
   def update
-    user = User.find(params[:id])
-    user.update_attributes(user_params)
-    redirect_to user_path(user)
+    @user = User.find(params[:id])
+    @user.update_attributes(user_params)
+    redirect_to user_path(@user)
   end
 
   # DELETE /users/1
   def destroy
     user = User.find(params[:id])
     user.destroy
-    redirect_to users_path
   end
 
   private
