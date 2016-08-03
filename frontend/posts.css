@@ -6,7 +6,7 @@
 	border-radius: 8px;
 	border-style: double;
 	border-color: #2F354B;
-	padding: 25px 50px 75px 100px;
+	padding: 5px 50px 100px 10px;
 	font: 15px arial, sans-serif;
 	background-color: #5367AC;
 	opacity: .9;
@@ -27,9 +27,13 @@ opacity: 1;
 	height: 100px;
 	width: 100px;
 	float: left;
+	margin-left: 0px;
+	margin-right: 35px;
+
 }
 .avatar:hover {
-	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);
+/*	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);*/
+	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
 }
 
 .username {
@@ -40,8 +44,9 @@ opacity: 1;
 }
 
 .post_date {
-	float: right;
+	float: left;
 	font-size: 20px;
+		margin-right: 490px;
 }
 
 .post_summary {
@@ -55,11 +60,17 @@ opacity: 1;
 	width: 450px;
 	font-size: 20px;
 	display: inline-block;
-	margin-left: 110px;
+	margin-left: 170px;
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+	
+}
+
+#summary {
+	padding-top: -10px;
 }
 .post_summary:hover {
-	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);
-	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
+		/*-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);*/
 	 -o-transition: color .7s ease-out,background 7s ease-in;
     -ms-transition: color .7s ease-out,background 7s ease-in;
     -moz-transition: color .7s ease-out,background 7s ease-in;
