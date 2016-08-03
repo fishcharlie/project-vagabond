@@ -3,8 +3,6 @@
   <head>
     <title>Vagabond</title>
     <%= csrf_meta_tags %>
-
-
     <!--jquery-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-rc1/jquery.min.js"></script>
 
@@ -14,120 +12,113 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-
-
-
   </head>
-
   <body>
+    
+    <header>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-fixed-top" id="navbar-def">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <!--Burger navbar -->
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">Vagabond</a>
+            </div>
 
-          <header>
+            <div id="navbar" class="navbar-collapse collapse">
+              <ul class="nav navbar-nav navbar-right">
+                <% if current_user == nil %>
+                  <li>
+                    <a href="#loginModal" role="button" data-toggle="modal">Login</a>
+                  </li>
+                  <li>
+                    <a href="#registerModal" role="button" data-toggle="modal">Register</a>
+                  </li>
+                <% else %>
+                  <li><a>Hi <%=current_user.first_name %></a></li>
+                  <li>
+                    <%= link_to 'Logout', logout_path, method: :delete %>
+                  </li>
+                <% end %>
+              </ul>
+            </div>
+        </div>
+    </nav>
 
-          <!-- Navigation Bar -->
-          <nav class="navbar navbar-fixed-top" id="navbar-def">
-              <div class="container-fluid">
-                  <div class="navbar-header">
-                      <!--Burger navbar -->
-                      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                          <span class="icon-bar"></span>
-                      </button>
-                      <a class="navbar-brand" href="/">Vagabond</a>
-                  </div>
-
-                  <div id="navbar" class="navbar-collapse collapse">
-                      <ul class="nav navbar-nav navbar-right">
-                          <li>
-                              <a href="#loginModal" role="button" data-toggle="modal">Login</a>
-                          </li>
-                          <li>
-                              <a href="#registerModal" role="button" data-toggle="modal">Register</a>
-                          </li>
-                          <li>
-                              <%= link_to 'Logout', logout_path, method: :delete %>
-                          </li>
-
-                      </ul>
-                  </div>
-              </div>
-          </nav>
-           </header>
-
-
-           <!-- Register Modal -->
-           <div id="registerModal" class="modal fade" role="dialog">
-               <div class="modal-dialog">
-                   <!-- Modal content-->
-                   <div class="modal-content">
-                       <div class="modal-header">
-                           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                           <h4 class="modal-title">Register</h4>
-                       </div>
-                       <div class="modal-body">
-                           <%= form_for(User.new) do |f| %>
-                           <div class="form-group">
-                             <label for="first_name">First Name:</label>
-                             <%= f.text_field :first_name, placeholder: "First Name", :class => 'form-control' %>
-                           </div>
-                           <div class="form-group">
-                             <label for="last_name">Last Name:</label>
-                             <%= f.text_field :last_name, placeholder: "Last Name", :class => 'form-control' %>
-                           </div>
-                           <div class="form-group">
-                             <label for="email">Email:</label>
-                             <%= f.text_field :email, placeholder: "Email", :class => 'form-control' %>
-                           </div>
-                           <div class="form-group">
-                             <label for="password_digest">Password:</label>
-                             <%= f.password_field :password, placeholder: "Password", :class => 'form-control' %>
-                           </div>
-                           <div class="form-group">
-                             <label for="current_city">Current City:</label>
-                             <%= f.text_field :current_city, placeholder: "Current City", :class => 'form-control' %>
-                           </div>
-                           <div class="form-group">
-                             <label for="profile_photo">Profile Photo:</label>
-                             <%= f.text_field :profile_photo, placeholder: "Link to Photo", :class => 'form-control' %>
-                           </div>
-                            <%= f.submit "Submit", :class => 'btn btn-default' %>
-                         <% end %>
-                       </div>
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal fade" role="dialog">
+       <div class="modal-dialog">
+           <!-- Modal content-->
+           <div class="modal-content">
+               <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Register</h4>
+               </div>
+               <div class="modal-body">
+                   <%= form_for(User.new) do |f| %>
+                   <div class="form-group">
+                     <label for="first_name">First Name:</label>
+                     <%= f.text_field :first_name, placeholder: "First Name", :class => 'form-control' %>
                    </div>
+                   <div class="form-group">
+                     <label for="last_name">Last Name:</label>
+                     <%= f.text_field :last_name, placeholder: "Last Name", :class => 'form-control' %>
+                   </div>
+                   <div class="form-group">
+                     <label for="email">Email:</label>
+                     <%= f.text_field :email, placeholder: "Email", :class => 'form-control' %>
+                   </div>
+                   <div class="form-group">
+                     <label for="password_digest">Password:</label>
+                     <%= f.password_field :password, placeholder: "Password", :class => 'form-control' %>
+                   </div>
+                   <div class="form-group">
+                     <label for="current_city">Current City:</label>
+                     <%= f.text_field :current_city, placeholder: "Current City", :class => 'form-control' %>
+                   </div>
+                   <div class="form-group">
+                     <label for="profile_photo">Profile Photo:</label>
+                     <%= f.text_field :profile_photo, placeholder: "Link to Photo", :class => 'form-control' %>
+                   </div>
+                    <%= f.submit "Submit", :class => 'btn btn-default' %>
+                 <% end %>
                </div>
            </div>
+       </div>
+    </div>
 
-
-           <!-- Login Modal -->
-               <div id="loginModal" class="modal fade" role="dialog">
-                   <div class="modal-dialog">
-                       <!-- Modal content-->
-                       <div class="modal-content">
-                           <div class="modal-header">
-                               <button type="button" class="close" data-dismiss="modal">&times;</button>
-                               <h4 class="modal-title">Login</h4>
-                           </div>
-                           <div class="modal-body">
-                             <%= form_for User.new, url: "/sessions", method: "post" do |f| %>
-                               <div class="form-group">
-                                 <label for="email">Email:</label>
-                                 <%= f.text_field :email, placeholder: "Email", :class => "form-control" %>
-                               </div>
-                               <div class="form-group">
-                                 <label for="password_digest">Password:</label>
-                                 <%= f.password_field :password, placeholder: "Password", :class => "form-control" %>
-                               </div>
-                               <%= f.submit "Sign In", :class => "btn btn-default" %>
-                               <% end %>
-                           </div>
-                       </div>
-                   </div>
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal fade" role="dialog">
+       <div class="modal-dialog">
+           <!-- Modal content-->
+           <div class="modal-content">
+               <div class="modal-header">
+                   <button type="button" class="close" data-dismiss="modal">&times;</button>
+                   <h4 class="modal-title">Login</h4>
                </div>
+               <div class="modal-body">
+                 <%= form_for User.new, url: "/sessions", method: "post" do |f| %>
+                   <div class="form-group">
+                     <label for="email">Email:</label>
+                     <%= f.text_field :email, placeholder: "Email", :class => "form-control" %>
+                   </div>
+                   <div class="form-group">
+                     <label for="password_digest">Password:</label>
+                     <%= f.password_field :password, placeholder: "Password", :class => "form-control" %>
+                   </div>
+                   <%= f.submit "Sign In", :class => "btn btn-default" %>
+                   <% end %>
+               </div>
+           </div>
+       </div>
+    </div>
+    </header>
 
-
-
-
-    <%= yield %>
+  <%= yield %>
 
   </body>
 </html>
