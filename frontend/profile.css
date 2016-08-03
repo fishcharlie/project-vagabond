@@ -11,6 +11,10 @@ html {
 .profilecontent {
      text-align: right;
 }
+body {
+    background: url('profilebg.png');
+    height: 100vh;
+}
 
 /*Nav Items*/
 
