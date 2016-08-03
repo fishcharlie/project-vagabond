@@ -1,0 +1,89 @@
+.post {
+	height: 200px;
+	width: 850px;
+	margin: 0 0 50px 0;
+	border-width: 4px;
+	border-radius: 8px;
+	border-style: double;
+	border-color: #2F354B;
+	padding: 5px 50px 100px 10px;
+	font: 15px arial, sans-serif;
+	background-color: #5367AC;
+	opacity: .9;
+}
+
+.post:hover {
+opacity: 1;
+ -o-transition: color .7s ease-out,background 7s ease-in;
+ -ms-transition: color .7s ease-out,background 7s ease-in;
+ -moz-transition: color .7s ease-out,background 7s ease-in;
+ -webkit-transition: color .7s ease-out,background 7s ease-in;
+ transition: color .7s ease-out,background 7s ease-in;
+}
+
+.avatar {
+	border-radius: 50%;
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+	height: 100px;
+	width: 100px;
+	float: left;
+	margin-left: 0px;
+	margin-right: 35px;
+
+}
+.avatar:hover {
+/*	-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);*/
+	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
+}
+
+.username {
+	color: #ebedf5;
+	text-align: center;
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+	margin-right: 130px;
+}
+.username:hover {
+	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
+}
+
+.post_date {
+	color: #ebedf5;
+	font-weight: lighter;
+	float: left;
+	font-size: 20px;
+	margin-left: 0px;
+	margin-right: 35px;
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+}
+.post_date:hover {
+	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
+}
+
+.post_summary {
+    border-width: 2px;
+	border-radius: 8px;
+	border-style: double;
+	border-color: #2F354B;
+	background-color: #A9B3D5;
+	text-align: center;
+	height: 30px;  
+	width: 450px;
+	font-size: 20px;
+	display: inline-block;
+	margin-left: 170px;
+	-webkit-filter: drop-shadow(4px 4px 5px #313D67);
+	
+}
+
+#summary {
+	padding-top: -10px;
+}
+.post_summary:hover {
+	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
+		/*-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);*/
+	 -o-transition: color .7s ease-out,background 7s ease-in;
+    -ms-transition: color .7s ease-out,background 7s ease-in;
+    -moz-transition: color .7s ease-out,background 7s ease-in;
+    -webkit-transition: color .7s ease-out,background 7s ease-in;
+    transition: color .7s ease-out,background 7s ease-in;
+}
