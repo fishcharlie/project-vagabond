@@ -15,3 +15,23 @@ body {
     background: url('profilebg.png');
     height: 100vh;
 }
+
+h1 {
+	font-size: 40px;
+	-webkit-filter: drop-shadow(2px 2px 3px white);
+}
+
+h1:hover {
+	  transition-duration: .3s, 2s;
+}
+
+.col-md-12 {
+font-size: 25px;
+font-weight: lighter;
+}
+
+.col-md-12:hover {
+-webkit-filter: drop-shadow(2px 2px 3px white);
+  transition-duration: .3s, 2s;
+}
+
