@@ -8,6 +8,9 @@ html {
 .profilename {
     font-size:40px;
 }
+.profilecontent {
+     text-align: right;
+}
 
 /*Nav Items*/
 
