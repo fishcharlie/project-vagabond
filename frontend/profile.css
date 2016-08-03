@@ -1,20 +1,17 @@
 html {
     background: white;
 }
-
 .profileheader {
     margin-top: 60px;
     padding-top: 20px;
 }
-
 
 /*Nav Items*/
 
 .navbar {
     border-bottom: 1px black solid;
 }
-.navbar-brand,
-.navbar-brand:hover {
+.navbar-brand, .navbar-brand:hover {
     color: black;
 }
 .navbar .navbar-nav li a {
@@ -23,7 +20,6 @@ html {
 .icon-bar {
     background-color: black;
 }
-
 .navbar-nav li a:hover {
     color: black;
 }
