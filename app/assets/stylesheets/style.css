@@ -199,6 +199,11 @@ body {
     font-size: 1.75vw;
 }
 
+.summary {
+    font-weight: 300;
+    margin-bottom: 20px;
+}
+
 .btn-secondary {
     width: 100%;
     margin-bottom: 10px;

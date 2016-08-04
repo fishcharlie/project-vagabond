@@ -29,7 +29,6 @@
 
 <div style="background: url(<%=@city.photo_url%>) no-repeat center center scroll" class="hero-city">
 </div>
-
 <div class="city-content col-md-10 col-md-offset-1">
 	<h1>
 	  <strong><%= @city.name %></strong>
@@ -41,8 +40,9 @@
 	</h2>
 	<h3>
 		<strong>Summary:</strong>
-		<%= @city.description %>
+		<p class="summary"><%= @city.description %></p>
 	</h3>
+	<button class="btn"><a href="#postModal" role="button" data-toggle="modal">New Post</a></button>
 </div>
 
 <div class="col-md-10 col-md-offset-1 profile-body">
