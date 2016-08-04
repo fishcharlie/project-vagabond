@@ -14,15 +14,23 @@
 </p>
 
 <p><strong>Keywords:</strong>
-<% @keywords.each do |keyword| %> 
-	<%= keyword %>
-<% end %>
+	<% @keywords.each do |keyword| %> 
+		<%= keyword %>
+	<% end %>
 </p>
 
-<%= link_to 'Back', cities_path %>
+<p><strong>Posts:</strong>
+	<% @posts.each do |post| %> 
+		<p><%= post.title %></p>
+		<p><%= post.summary %></p>
+	<% end %>
+</p>
 
+<%= link_to 'Back', cities_path %>  |  
 <a href="#postModal" role="button" data-toggle="modal">New Post</a>
 
+
+<!-- New Post Modal -->
 <div id="postModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
 		<!-- Modal content-->
@@ -42,7 +50,7 @@
 						<%= f.text_area :summary, placeholder: "Post Summary", :class => 'form-control' %>
 					</div>
 					<div class= "form-group">
-						<input type="hidden" name="city" value="<%=@city.id%>">
+						<%= f.hidden_field :city_id, :value => @city.id %>
 					</div>
 					<%= f.submit "Submit", :class => 'btn btn-default' %>
 				<% end %>

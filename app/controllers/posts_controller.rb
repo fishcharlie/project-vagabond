@@ -23,12 +23,14 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
+    city_id = post_params[:city_id]
+    @city = City.find_by_id(city_id)
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     @post.date_created = Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
-    @post.city_id = post_params[:city]
+    @post.city_id = city_id
     @post.save
-    redirect_to user_path(current_user)
+    redirect_to city_path(@city)
   end
 
   # PATCH/PUT /posts/1
@@ -58,6 +60,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :summary)
+      params.require(:post).permit(:title, :summary, :city_id)
     end
 end
