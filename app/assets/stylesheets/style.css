@@ -1,8 +1,11 @@
-/*Nav Items*/
-.navbar-default {
-    background-color: transparent;
+/*Global Tags*/
+html {
+    font-family: "Helvetica Neue", Helvetica,Arial,sans-serif;
 }
+
+/*Navigation Tags*/
 .navbar {
+    background-color: transparent;
     margin-bottom: 0;
     z-index: 3;
     border-bottom: 1px white solid;
@@ -13,6 +16,7 @@
     height: 60px;
     padding-top: 5px;
 }
+
 .navbar-brand,
 .navbar-brand:hover {
     font-size: 20px;
@@ -50,21 +54,37 @@
 }
 
 /*Profile Page*/
-.profileheader {
-    margin-top: 60px;
-    padding-top: 20px;
-}
-.profilename {
-    font-size:40px;
-}
-.profilecontent {
-     text-align: right;
-}
-.profile {
-    background: url('profilebg.png');
+.profile-page {
+    background: linear-gradient(to bottom right, #4B79A1, #283E51); /* Standard syntax */
     height: 100vh;
 }
+.profile-box {
+    height: 70vh;
+    margin-top: 20vh;
+    border-radius: 30px;
+    background-color: white;
+}
 
+.profile-head {
+    text-align: center;
+}
+
+.profile-img {
+    position: absolute;
+    left: 50%;
+    margin: 0 0 0 -100px;
+    top: -100px;
+    width: 200px;
+    height: 200px;
+    border: 4px solid white;
+    border-radius: 100px;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.user-name {
+    margin: 120px 0 0 0;
+}
 
 /** Index Page **/
 .hero {
@@ -73,21 +93,23 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    height: 500px;
-    /*margin-top: px;*/
+    height: 60vh;
+    text-align: center;
 }
 
 .hero p {
-    padding-top: 320px;
+    padding-top: 40vh;
     color: #ffffff;
     font-weight: 100;
     letter-spacing: 3px;
     font-size: 42px;
 }
 
-body {
-    background-color: transparent;
-    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+.city-name {
+    font-size: 36px;
+    padding-top: 50px;
+    text-align: center;
+    font-weight: 200;
 }
 
 .places_container {
@@ -103,7 +125,12 @@ body {
     margin-top: 30px;
 }
 
-img {
+.btn-secondary {
+    margin-top: 60px;
+    margin-left: 80px;
+}
+
+.mini-location-pic {
     border-radius: 30px;
     width: 200px;
     height: 150px;
@@ -111,14 +138,7 @@ img {
     padding: 15px 15px 15px 0px;
 }
 
-p {
-    font-size: 36px;
-    padding-top: 50px;
-    text-align: center;
-    font-weight: 200;
-}
-
-.btn-secondary {
-    margin-top: 60px;
-    margin-left: 80px;
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
 }

@@ -39,7 +39,9 @@
                     <a href="#registerModal" role="button" data-toggle="modal">Register</a>
                   </li>
                 <% else %>
-                  <li><a>Hi <%=current_user.first_name %></a></li>
+                  <li>
+                    <a href="./users/<%=current_user.id%>">My Profile</a>
+                  </li>
                   <li>
                     <%= link_to 'Logout', logout_path, method: :delete %>
                   </li>
