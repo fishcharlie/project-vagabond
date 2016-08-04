@@ -26,14 +26,21 @@
 		<div class="col-md-12 profile-head">
 			<div class="profile-img" style="background-image: url('<%= @user.profile_photo %>')">
 			</div>
-			<h2 class="user-name"><%= @user.first_name %><%= @user.last_name %></h2>
+			<p class="user-name"><%= @user.first_name %> <%= @user.last_name %></p>
+			<p class="profile-details">Email: <%= @user.email %>  |  City: <%= @user.current_city %>  |  Member Since: <%= @date %></p>
 		</div>
-		<div class="col-md-12 profile-body">
-			<p>Email: <%= @user.email %></p>
-			<br>
-			<p>Your City: <%= @user.current_city %></p>
-			<br>
-			<p>Profile Created: <%= @user.created_at %></p>
+		<div class="col-md-10 col-md-offset-1 profile-body">
+			<% @user.posts.each do |post| %> 
+				<p class="post-headline"><%= @user.first_name %> wrote...</p>
+				<div class="col-md-12 post-box">
+					<p class="post-title"><span style="font-weight: 500">"<%= post.title %>"</span> on <%= post.date_created %></p>
+					<p class="post-summary"><%= post.summary %></p>
+				</div>
+				<div class="col-md-12 post-buttons">
+					<%= link_to 'Edit', edit_post_path(post) %> | 
+        			<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</div>
+			<% end %>
 		</div>
 	</div>
 </div>

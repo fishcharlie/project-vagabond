@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    @posts = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -25,6 +25,7 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    @post.date_created = Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
     @post.save
     redirect_to user_path(current_user)
   end
@@ -45,10 +46,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to user_path(current_user)
   end
 
   private
