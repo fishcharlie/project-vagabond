@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Summary:</strong>
-  <%= @post.summary %>
-</p>
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<div class="profile-page">
+	<div class="col-md-6 col-md-offset-3 profile-box">
+		<div class="col-md-10 col-md-offset-1 profile-body">
+			<p class="post-headline"><%= User.find_by_id(@post.user_id)[:first_name] %>  wrote...</p>
+			<div class="col-md-12 post-box">
+				<p class="post-title"><span style="font-weight: 500">"<%=@post.title %>"</span> on <%= @post.date_created %></p>
+				<p class="post-summary"><%= @post.summary %></p>
+			</div>
+			<div class="col-md-12 post-buttons">
+				<%= link_to 'Edit', edit_post_path(@post) %> | 
+				<%= link_to 'Destroy', @post, method: :delete, data: { confirm: 'Are you sure?' } %>
+			</div>
+		</div>
+	</div>
+</div>
