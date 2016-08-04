@@ -60,7 +60,7 @@ body {
 
 /*Profile Page*/
 .profile-page {
-    background: linear-gradient(to bottom right, #4B79A1, #283E51); /* Standard syntax */
+    background: linear-gradient(to bottom right, #7EA5CC, #0B3D78); /* Standard syntax */
     display:block;
     overflow:auto;
     height: 100%;
