@@ -1,35 +1,3 @@
-<h1>Cities#show</h1>
-<p>Find me in app/views/cities/show.html.erb</p>
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @city.name %>
-</p>
-
-<p>
-  <strong>Summary:</strong>
-  <%= @city.description %>
-</p>
-
-<p><strong>Keywords:</strong>
-	<% @keywords.each do |keyword| %> 
-		<%= keyword %>
-	<% end %>
-</p>
-
-<p><strong>Posts:</strong>
-	<% @posts.each do |post| %> 
-		<p><%= post.title %></p>
-		<p><%= post.summary %></p>
-	<% end %>
-</p>
-
-<%= link_to 'Back', cities_path %>  |  
-<a href="#postModal" role="button" data-toggle="modal">New Post</a>
-
-
 <!-- New Post Modal -->
 <div id="postModal" class="modal fade" role="dialog">
 	<div class="modal-dialog">
@@ -56,5 +24,36 @@
 				<% end %>
 			</div>
 		</div>
+	</div>
+</div>
+
+<div style="background: url(<%=@city.photo_url%>) no-repeat center center scroll" class="hero-city">
+</div>
+<div class="city-content col-md-10 col-md-offset-1">
+
+	<h1>
+	  <strong><%= @city.name %></strong>
+	</h1>
+	<h2>
+		<% @keywords.each do |keyword| %> 
+			<%= keyword %> |
+		<% end %>
+	</p>
+
+	<h3>
+		<strong>Summary:</strong>
+		<%= @city.description %>
+	</h3>
+	<hr>
+
+	<h1>Posts:
+		<% @posts.each do |post| %> 
+			<h3><%= post.title %></h2>
+			<h5><%= post.summary %></h4>
+		<% end %>
+	</h1>
+	<div class = "city-buttons">
+		<%= link_to 'Back', cities_path %>  |  
+		<a href="#postModal" role="button" data-toggle="modal">New Post</a>
 	</div>
 </div>
