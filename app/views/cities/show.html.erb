@@ -29,31 +29,36 @@
 
 <div style="background: url(<%=@city.photo_url%>) no-repeat center center scroll" class="hero-city">
 </div>
-<div class="city-content col-md-10 col-md-offset-1">
 
+	<%= link_to 'Back', cities_path %>  |  
+	<a href="#postModal" role="button" data-toggle="modal">New</a>
+
+<div class="city-content col-md-10 col-md-offset-1">
 	<h1>
 	  <strong><%= @city.name %></strong>
-	</h1>
+	</h2>
 	<h2>
 		<% @keywords.each do |keyword| %> 
-			<%= keyword %> |
+			| <%= keyword %> |
 		<% end %>
-	</p>
-
+	</h2>
 	<h3>
 		<strong>Summary:</strong>
 		<%= @city.description %>
 	</h3>
-	<hr>
+</div>
 
-	<h1>Posts:
-		<% @posts.each do |post| %> 
-			<h3><%= post.title %></h2>
-			<h5><%= post.summary %></h4>
-		<% end %>
-	</h1>
-	<div class = "city-buttons">
-		<%= link_to 'Back', cities_path %>  |  
-		<a href="#postModal" role="button" data-toggle="modal">New Post</a>
-	</div>
+<div class="col-md-10 col-md-offset-1 profile-body">
+	<% @posts.each do |post| %> 
+		<p class="post-headline"><%= User.find_by_id(post.user_id)[:first_name] %>  wrote...</p>
+		<div class="col-md-12 post-box">
+			<p class="post-title"><span style="font-weight: 500">"<%=post.title %>"</span> on <%= post.date_created %></p>
+			<p class="post-summary"><%= post.summary %></p>
+		</div>
+		<div class="col-md-12 post-buttons">
+			<%= link_to 'Edit', edit_post_path(post) %> | 
+			<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %> |
+			<%= link_to 'Show', post %>
+		</div>
+	<% end %>
 </div>
