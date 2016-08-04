@@ -1,14 +1,14 @@
 $(document).ready(function() {
 
   var scroll_start = 0;
-    var startchange = $('#startchange');
+    var startchange = $('.start_change');
     var offset = startchange.offset();
     $(document).scroll(function() { 
       scroll_start = $(this).scrollTop();
-      if(scroll_start > offset.top) {
-          $('.navbar_default').css('background-color', 'black');
+      if(scroll_start > (offset.top - 50)) {
+          $('.navbar').css('background-color', '#01295A');
        } else {
-          $('.navbar_default').css('background-color', 'transparent');
+          $('.navbar').css('background-color', 'transparent');
        }
     });
 });

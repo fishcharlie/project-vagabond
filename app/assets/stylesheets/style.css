@@ -144,10 +144,11 @@ body {
     background-size: cover;
     height: 65vh;
     text-align: center;
+    padding-top: 280px;
 }
 
 .hero p {
-    padding-top: 40vh;
+    padding-top: 0vh;
     color: #ffffff;
     font-weight: 200;
     letter-spacing: 3px;
