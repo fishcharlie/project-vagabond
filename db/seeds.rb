@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 Post.delete_all
+City.delete_all
 
 posts = [
 	Post.create(
@@ -25,3 +26,17 @@ posts = [
 		date_created: "Aug 04, 2016")
 ]
 
+cities = [
+	City.create(
+		name: "Denver", 
+		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
+		keywords: ["fun", "granola", "subarus"]), 
+	City.create(
+		name: "Portland", 
+		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
+		keywords: ["weird", "small batch", "mustache"]),
+	City.create(
+		name: "Seattle", 
+		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
+		keywords: ["Not LA", "rainy", "grunge"])
+]
