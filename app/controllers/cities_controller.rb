@@ -6,6 +6,6 @@ class CitiesController < ApplicationController
   def show
   	@city = City.find(params[:id])
   	@keywords = @city.keywords
-  	@posts = @city.posts.all
+  	@posts = @city.posts.order(:created_at => :desc)
   end
 end
