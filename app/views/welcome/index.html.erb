@@ -5,18 +5,19 @@
 <div class="places_container">
     <div class="row">
         <% @cities.each do |city| %>
-        <a href="/cities/<%=city.id%>">
             <div class="col-xs-10 col-xs-offset-1 place">
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
                         <img class="mini-location-pic" src="<%=city.photo_url%>" />
                     </div>
-                    <div class="col-xs-12 col-md-6">
-                        <p class="city-name"><%=city.name%></p>
+                    <div class="col-xs-12 col-md-6 city-sidebar">
+                        <a href="/cities/<%=city.id%>"><p class="city-name"><%=city.name%></p></a>
+                        <% city.keywords.each do |keyword| %>
+                            <p class="keywords">| <%= keyword %> |</p>
+                        <% end %>
                     </div>       
                 </div>         
             </div>
-        </a>
         <% end %>
     </div>
 </div>
