@@ -1,0 +1,22 @@
+<h1>Cities#show</h1>
+<p>Find me in app/views/cities/show.html.erb</p>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @city.name %>
+</p>
+
+<p>
+  <strong>Summary:</strong>
+  <%= @city.description %>
+</p>
+
+<p><strong>Keywords:</strong>
+<% @keywords.each do |keyword| %> 
+	<%= keyword %>
+<% end %>
+</p>
+
+<%= link_to 'Back', cities_path %>
