@@ -10,6 +10,7 @@ class UsersController < ApplicationController
   # GET /users/1
   def show
     @user = User.find(params[:id])
+    @date = @user.created_at.strftime("%b %d, %Y")
   end
 
   # GET /users/new

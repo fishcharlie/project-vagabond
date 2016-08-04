@@ -1,23 +1,25 @@
 <p id="notice"><%= notice %></p>
 
-<h2>Welcome, <%= @user.first_name %></h2>
-<p>Email: <%= @user.email %></p>
-<p>Your City: <%= @user.current_city %></p>
-<p>Profile Created: <%= @user.created_at %></p>
-<img src="<%= @user.profile_photo %>"/>
-<br>
-<h3>Locations </h3>
-<%@user.posts.each do |post|%>
- 	<p>Title: <a href="../posts/<%=post.id%>"><%=post.title%></a></p>
- 	<p>Summary:<%=post.summary%></p>
- 	<%= link_to 'Edit', edit_post_path(post) %> |
-	<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
-
- <%end%>
-
-<div><%= link_to 'Edit', edit_user_path(@user) %> | <%= link_to 'Back', users_path %></div>
-
-<br>
-<br>
-<div><%= link_to 'New Post', new_post_path %></div>
-
+<div class="profile-page">
+	<div class="col-md-6 col-md-offset-3 profile-box">
+		<div class="col-md-12 profile-head">
+			<div class="profile-img start_change" style="background-image: url('<%= @user.profile_photo %>')">
+			</div>
+			<p class="user-name"><%= @user.first_name %> <%= @user.last_name %></p>
+			<p class="profile-details">Email: <%= @user.email %>  |  City: <%= @user.current_city %>  |  Member Since: <%= @date %></p>
+		</div>
+		<div class="col-md-10 col-md-offset-1 profile-body">
+			<% @user.posts.each do |post| %> 
+				<p class="post-headline"><%= @user.first_name %> wrote...</p>
+				<div class="col-md-12 post-box">
+					<p class="post-title"><span style="font-weight: 500">"<%= post.title %>"</span> on <%= post.date_created %></p>
+					<p class="post-summary"><%= post.summary %></p>
+				</div>
+				<div class="col-md-12 post-buttons">
+					<%= link_to 'Edit', edit_post_path(post) %> | 
+        			<%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+				</div>
+			<% end %>
+		</div>
+	</div>
+</div>

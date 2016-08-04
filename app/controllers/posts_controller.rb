@@ -8,7 +8,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   def show
-    @posts = Post.find(params[:id])
+    @post = Post.find(params[:id])
   end
 
   # GET /posts/new
@@ -23,10 +23,14 @@ class PostsController < ApplicationController
 
   # POST /posts
   def create
+    city_id = post_params[:city_id]
+    @city = City.find_by_id(city_id)
     @post = Post.new(post_params)
     @post.user_id = current_user.id
+    @post.date_created = Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
+    @post.city_id = city_id
     @post.save
-    redirect_to user_path(current_user)
+    redirect_to city_path(@city)
   end
 
   # PATCH/PUT /posts/1
@@ -45,10 +49,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
-    respond_to do |format|
-      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to user_path(current_user)
   end
 
   private
@@ -59,6 +60,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params.require(:post).permit(:title, :summary)
+      params.require(:post).permit(:title, :summary, :city_id)
     end
 end

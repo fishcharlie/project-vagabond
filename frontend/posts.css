@@ -80,8 +80,8 @@ opacity: 1;
 }
 .post_summary:hover {
 	-webkit-filter: drop-shadow(6px 6px 8px #313D67);
-		/*-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);*/
-	 -o-transition: color .7s ease-out,background 7s ease-in;
+	/*-webkit-filter: drop-shadow(4px 4px 5px #A9B3D5);*/
+	-o-transition: color .7s ease-out,background 7s ease-in;
     -ms-transition: color .7s ease-out,background 7s ease-in;
     -moz-transition: color .7s ease-out,background 7s ease-in;
     -webkit-transition: color .7s ease-out,background 7s ease-in;
