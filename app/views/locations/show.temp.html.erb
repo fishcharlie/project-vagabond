@@ -1,0 +1,19 @@
+<div class="hero" style="background">
+    <p>Denver</p>
+</div>
+<div class="places_container">
+    <div class="row">
+        <p class="post-headline"><%= @user.first_name %>
+            wrote...</p>
+        <div class="col-md-12 post-box">
+            <p class="post-title">
+                <span style="font-weight: 500">"<%= post.title %>"</span>
+                on
+                <%= post.date_created %></p>
+            <p class="post-summary"><%= post.summary %></p>
+        </div>
+        <div class="col-md-12 post-buttons">
+            <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %>
+        </div>
+    </div>
+</div>
