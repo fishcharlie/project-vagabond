@@ -5,8 +5,30 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# Post.delete_all
-# City.delete_all
+Post.delete_all
+City.delete_all
+
+cities = [
+	City.create(
+		id: 1,
+		name: "Denver", 
+		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
+		keywords: ["fun", "granola", "subarus"],
+		photo_url: "http://denveryoungprofessionals.com/wp-content/uploads/2015/01/denver-skyline.jpg"),
+	City.create(
+		id: 2,
+		name: "Portland", 
+		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
+		keywords: ["weird", "small batch", "mustache"],
+		photo_url: "https://www.phase2technology.com/wp-content/uploads/2014/06/Portland.jpg"),
+	City.create(
+		id: 3,		
+		name: "Seattle", 
+		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
+		keywords: ["Not LA", "rainy", "grunge"],
+		photo_url: "http://pydata.org/seattle2015/static/images/TiffanyVonArnim-Seattle.jpg"),
+]
+
 
 posts = [
 	Post.create(
@@ -14,7 +36,7 @@ posts = [
 		user_id: 1, 
 		title: "Amazing Museums!", 
 		summary: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
-		date_created: "May 22, 2011"), 
+		date_created: "May 22, 2011"),
 	Post.create(
 		city_id: 1,
 		user_id: 1, 
@@ -27,19 +49,4 @@ posts = [
 		title: "Go to the mountains!", 
 		summary: "Scenester pickled kale chips actually marfa paleo. Cliche pour-over asymmetrical farm-to-table. Next level ugh kale chips skateboard craft beer. Umami intelligentsia drinking vinegar trust fund, offal neutra tacos you probably haven't heard of them.", 
 		date_created: "Aug 04, 2016")
-]
-
-cities = [
-	City.create(
-		name: "Denver", 
-		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
-		keywords: ["fun", "granola", "subarus"]), 
-	City.create(
-		name: "Portland", 
-		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
-		keywords: ["weird", "small batch", "mustache"]),
-	City.create(
-		name: "Seattle", 
-		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
-		keywords: ["Not LA", "rainy", "grunge"])
 ]

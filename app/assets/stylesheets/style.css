@@ -142,25 +142,40 @@ body {
 
 /** Index Page **/
 .hero {
-    background: url('background.jpg') no-repeat center center scroll;
     background-size: cover;
+    padding-top: 40vh;
     height: 65vh;
     text-align: center;
-    padding-top: 280px;
+    width: 100vw;
 }
 
 .hero p {
-    padding-top: 0vh;
     color: #ffffff;
     font-weight: 200;
     letter-spacing: 3px;
     font-size: 42px;
 }
 
+.hero-city{
+    background-size: cover;
+    padding-top: 40vh;
+    height: 55vh;
+    text-align: center;
+    width: 100vw;
+}
+
 .city-name {
     font-size: 36px;
     text-align: center;
     font-weight: 300;
+}
+
+.city-content{
+    text-align: center;
+}
+
+.city-buttons {
+    margin-bottom: 25px;
 }
 
 .places_container {
