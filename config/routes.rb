@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   # Index/Welcome Routes
 	root to: "welcome#index"
 
@@ -11,5 +13,10 @@ Rails.application.routes.draw do
 	resources :users
 
   #Post Routes
-  	resources :posts
+  resources :posts
+
+  #City Routes
+  get 'cities', to: "cities#index", as: "cities"
+  get 'cities/:id', to: "cities#show", as: "city"
+
 end
