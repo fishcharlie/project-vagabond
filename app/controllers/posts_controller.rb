@@ -26,6 +26,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params)
     @post.user_id = current_user.id
     @post.date_created = Time.now.strftime("%Y-%d-%m %H:%M:%S %Z")
+    p post_params
     @post.save
     redirect_to user_path(current_user)
   end
