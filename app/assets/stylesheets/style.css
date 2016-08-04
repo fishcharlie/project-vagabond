@@ -207,3 +207,12 @@ body {
     margin-right: 0 !important;
     margin-left: 0 !important;
 }
+
+.edit-post-page {
+    background: linear-gradient(to bottom right, #7EA5CC, #0B3D78); /* Standard syntax */
+    display:block;
+    overflow:auto;
+    height: 100%;
+    padding-top: 50px;
+    text-align: center;
+}
