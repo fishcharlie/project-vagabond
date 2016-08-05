@@ -5,8 +5,17 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+User.delete_all
 Post.delete_all
 City.delete_all
+
+t.string   "first_name"
+    t.string   "last_name"
+    t.string   "current_city"
+    t.date     "date_joined"
+    t.string   "profile_photo"
+    t.string   "password_digest"
+    t.string   "email"
 
 cities = [
 	City.create(
@@ -29,6 +38,16 @@ cities = [
 		photo_url: "http://pydata.org/seattle2015/static/images/TiffanyVonArnim-Seattle.jpg"),
 ]
 
+users = [
+	User.create(
+		id: 1,
+		first_name: "Greg", 
+		last_name: "Brunk", 
+		current_city: "Denver, CO",
+		profile_photo: "http://celebrityinside.com/wp-content/uploads/2015/01/Brad-Pitt.jpg"),
+		password_digeest: "password",
+		email: "greg.brunk@gmail.com")
+]
 
 posts = [
 	Post.create(
