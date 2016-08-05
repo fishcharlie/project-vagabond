@@ -29,8 +29,8 @@
 
 <div style="background: url(<%=@city.photo_url%>) no-repeat center center scroll" class="hero-city">
 </div>
-<div class="city-content col-md-10 col-md-offset-1">
-	<h1>
+<div id="start_change" class="city-content col-md-10 col-md-offset-1">
+	<h1 class="city-headline">
 	  <strong><%= @city.name %></strong>
 	</h2>
 	<h2>
@@ -38,11 +38,11 @@
 			| <%= keyword %> |
 		<% end %>
 	</h2>
-	<h3>
+	<h3 class="summary">
 		<strong>Summary:</strong>
-		<p class="summary"><%= @city.description %></p>
+		<p><%= @city.description %></p>
 	</h3>
-	<button class="btn"><a href="#postModal" role="button" data-toggle="modal">New Post</a></button>
+	<button class="btn btn-primary"><a href="#postModal" role="button" data-toggle="modal" id="new-post">New Post</a></button>
 </div>
 
 <div class="col-md-10 col-md-offset-1 profile-body">

@@ -15,7 +15,7 @@ cities = [
 		name: "Denver", 
 		description: "Lumbersexual portland cray, franzen meggings asymmetrical VHS swag tofu brooklyn jean shorts hella marfa. Before they sold out selfies leggings, twee hashtag ethical mlkshk sriracha narwhal occupy truffaut godard try-hard. Godard cornhole heirloom schlitz XOXO. Shabby chic williamsburg celiac locavore fap, kogi pug chartreuse fingerstache. Green juice organic PBR&B art party VHS. Freegan four loko authentic, bespoke williamsburg squid kinfolk celiac letterpress green juice franzen man braid organic humblebrag. Plaid ethical vegan neutra PBR&B semiotics.", 
 		keywords: ["fun", "granola", "subarus"],
-		photo_url: "http://denveryoungprofessionals.com/wp-content/uploads/2015/01/denver-skyline.jpg"),
+		photo_url: "http://www.thankgodimnatural.com/wp-content/uploads/2015/03/ff2c2adc835929c1b33fc4211a442d37.jpg"),
 	City.create(
 		id: 2,
 		name: "Portland", 
@@ -37,7 +37,7 @@ users = [
 		last_name: "Brunk", 
 		current_city: "Denver, CO",
 		profile_photo: "http://celebrityinside.com/wp-content/uploads/2015/01/Brad-Pitt.jpg",
-		password_digest: "password",
+		password: "password",
 		email: "greg.brunk@gmail.com")
 ]
 

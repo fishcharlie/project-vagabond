@@ -1,7 +1,7 @@
 $(document).ready(function() {
 
   var scroll_start = 0;
-    var startchange = $('.start_change');
+    var startchange = $('#start_change');
     var offset = startchange.offset();
     console.log(window);
     $('.profile-page').on('scroll', function() { 
