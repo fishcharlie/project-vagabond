@@ -9,14 +9,6 @@ User.delete_all
 Post.delete_all
 City.delete_all
 
-t.string   "first_name"
-    t.string   "last_name"
-    t.string   "current_city"
-    t.date     "date_joined"
-    t.string   "profile_photo"
-    t.string   "password_digest"
-    t.string   "email"
-
 cities = [
 	City.create(
 		id: 1,
@@ -44,8 +36,8 @@ users = [
 		first_name: "Greg", 
 		last_name: "Brunk", 
 		current_city: "Denver, CO",
-		profile_photo: "http://celebrityinside.com/wp-content/uploads/2015/01/Brad-Pitt.jpg"),
-		password_digeest: "password",
+		profile_photo: "http://celebrityinside.com/wp-content/uploads/2015/01/Brad-Pitt.jpg",
+		password_digest: "password",
 		email: "greg.brunk@gmail.com")
 ]
 
